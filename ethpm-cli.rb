@@ -1,4 +1,4 @@
-class Ethpm < Formula
+class EthpmCli < Formula
   include Language::Python::Virtualenv
   desc "CLI tool for ethPM ecosystem."
   homepage "www.ethpm.com"
