@@ -1,9 +1,9 @@
-class EthpmCli < Formula
+class Ethpm < Formula
   include Language::Python::Virtualenv
   desc "CLI tool for ethPM ecosystem."
   homepage "www.ethpm.com"
   url "https://github.com/ethpm/ethpm-cli/blob/master/archives/ethpm-cli-0.1.0a3.tar.gz?raw=true"
-  sha256 "7fee976a9b3a73ad23d4ba8b52b829608f991832dbd45f487bafd24e8cf24879"
+  sha256 "f9f94c30f2cfc63a5ddce7a3aaa1dbd5ddbafc0f1cb21293aa07f8f647562353"
 
   resource "asn1crypto" do
     url "https://files.pythonhosted.org/packages/fc/f1/8db7daa71f414ddabfa056c4ef792e1461ff655c2ae2928a2b675bfed6b4/asn1crypto-0.24.0.tar.gz"
@@ -39,8 +39,7 @@ class EthpmCli < Formula
     url "https://files.pythonhosted.org/packages/c2/95/f43d02315f4ec074219c6e3124a87eba1d2d12196c2767fadfdc07a83884/cryptography-2.7.tar.gz"
     sha256 "e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6"
   end
-
-  resource "cytoolz" do
+resource "cytoolz" do
     url "https://files.pythonhosted.org/packages/23/0d/14181131b886eee3bbc6c07c2e7469bd1d764c429644824a7dc3f8628a98/cytoolz-0.10.0.tar.gz"
     sha256 "ed9f6a07c2bac70d6c597df360d0666d11d2adc90141d54c5c2db08b380a4fac"
   end
