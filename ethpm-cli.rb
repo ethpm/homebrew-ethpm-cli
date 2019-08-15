@@ -1,4 +1,4 @@
-class EthpmCli < Formula
+class EthpmCli < Pandoc < Formula
   include Language::Python::Virtualenv
 
   desc "CLI tool for ethPM ecosystem."
