@@ -2,8 +2,8 @@ class EthpmCli < Formula
   include Language::Python::Virtualenv
   desc "CLI tool for ethPM ecosystem."
   homepage "www.ethpm.com"
-  url "https://github.com/ethpm/homebrew-tap/blob/master/archives/ethpm-cli-0.1.0a3.tar.gz"
-  sha256 "f1cdc3857b23648a0b1ccb40949bdb444adb0085b50b5e5c1d65e15950774e8c"
+  url "https://github.com/ethpm/ethpm-cli/blob/master/archives/ethpm-cli-0.1.0a3.tar.gz"
+  sha256 "7fee976a9b3a73ad23d4ba8b52b829608f991832dbd45f487bafd24e8cf24879"
 
   resource "asn1crypto" do
     url "https://files.pythonhosted.org/packages/fc/f1/8db7daa71f414ddabfa056c4ef792e1461ff655c2ae2928a2b675bfed6b4/asn1crypto-0.24.0.tar.gz"
