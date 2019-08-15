@@ -1,10 +1,13 @@
 class EthpmCli < Formula
   include Language::Python::Virtualenv
+
   desc "CLI tool for ethPM ecosystem."
-  homepage "www.ethpm.com"
-  url "https://github.com/ethpm/ethpm-cli/blob/master/archives/ethpm-cli-0.1.0a3.tar.gz?raw=true"
+  homepage "https://github.com/ethereum/ethpm-cli"
+  url "https://files.pythonhosted.org/packages/0c/44/5604f29ec16f33ebc2bd20c57b9dc6e612c6ee3a2ef6c27a3903517aba36/ethpm-cli-0.1.0a3.tar.gz"
   sha256 "f9f94c30f2cfc63a5ddce7a3aaa1dbd5ddbafc0f1cb21293aa07f8f647562353"
-  depends_on "python@3"
+
+  depends_on "python3"
+  depends_on "pandoc" => :build
 
   resource "asn1crypto" do
     url "https://files.pythonhosted.org/packages/fc/f1/8db7daa71f414ddabfa056c4ef792e1461ff655c2ae2928a2b675bfed6b4/asn1crypto-0.24.0.tar.gz"
@@ -40,7 +43,8 @@ class EthpmCli < Formula
     url "https://files.pythonhosted.org/packages/c2/95/f43d02315f4ec074219c6e3124a87eba1d2d12196c2767fadfdc07a83884/cryptography-2.7.tar.gz"
     sha256 "e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6"
   end
-resource "cytoolz" do
+
+  resource "cytoolz" do
     url "https://files.pythonhosted.org/packages/23/0d/14181131b886eee3bbc6c07c2e7469bd1d764c429644824a7dc3f8628a98/cytoolz-0.10.0.tar.gz"
     sha256 "ed9f6a07c2bac70d6c597df360d0666d11d2adc90141d54c5c2db08b380a4fac"
   end
@@ -95,11 +99,6 @@ resource "cytoolz" do
     sha256 "025a560a42f03db6c9484f5e6ecfdfb4d2f4652bc918092341fee9930907417f"
   end
 
-  resource "ethpm-cli" do
-    url "https://files.pythonhosted.org/packages/0c/44/5604f29ec16f33ebc2bd20c57b9dc6e612c6ee3a2ef6c27a3903517aba36/ethpm-cli-0.1.0a3.tar.gz"
-    sha256 "f9f94c30f2cfc63a5ddce7a3aaa1dbd5ddbafc0f1cb21293aa07f8f647562353"
-  end
-
   resource "hexbytes" do
     url "https://files.pythonhosted.org/packages/6c/96/c76cd573e7c3e38af32aa3e4ee9d9103efe33847b72f0507ac6d7a824307/hexbytes-0.2.0.tar.gz"
     sha256 "9e8b3e3dc4a7de23c0cf1bb3c3edfcc1f0df4b78927bad63816c27a027b8b7d1"
@@ -108,11 +107,6 @@ resource "cytoolz" do
   resource "idna" do
     url "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz"
     sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
-  end
-
-  resource "ipfshttpclient" do
-    url "https://files.pythonhosted.org/packages/bd/76/ec048dfcdf182d04cb1e7a1a1d23018fccc4c8eb6cca5a43c4edbc39262d/ipfshttpclient-0.4.12.tar.gz"
-    sha256 "0a199a1005fe44bff9da28b5af4785b0b09ca700baac9d1e26718fe23fe89bb7"
   end
 
   resource "jsonschema" do
@@ -180,6 +174,11 @@ resource "cytoolz" do
     sha256 "ff66319ce26b9d77df1f610942634dac9742e216f2c27b051c0a2c2dec9c2818"
   end
 
+  resource "pypandoc" do
+    url "https://files.pythonhosted.org/packages/71/81/00184643e5a10a456b4118fc12c96780823adb8ed974eb2289f29703b29b/pypandoc-1.4.tar.gz"
+    sha256 "e914e6d5f84a76764887e4d909b09d63308725f0cbb5293872c2c92f07c11a5b"
+  end
+
   resource "pysha3" do
     url "https://files.pythonhosted.org/packages/73/bf/978d424ac6c9076d73b8fdc8ab8ad46f98af0c34669d736b1d83c758afee/pysha3-1.0.2.tar.gz"
     sha256 "fe988e73f2ce6d947220624f04d467faf05f1bbdbc64b0a201296bb3af92739e"
@@ -236,19 +235,22 @@ resource "cytoolz" do
   end
 
   def install
-	  virtualenv_install_with_resources
+    virtualenv_create(libexec, "python3")
+	# https://github.com/takluyver/flit/issues/245
+	system libexec/"bin/pip", "install", "-v", "--no-deps", "--ignore-installed", "https://files.pythonhosted.org/packages/bd/76/ec048dfcdf182d04cb1e7a1a1d23018fccc4c8eb6cca5a43c4edbc39262d/ipfshttpclient-0.4.12.tar.gz#sha256=0a199a1005fe44bff9da28b5af4785b0b09ca700baac9d1e26718fe23fe89bb7"
+    virtualenv_install_with_resources
   end
 
-  test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test ethpm-cli`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+  test do	
+    # `test do` will create, run in and delete a temporary directory.	
+    #	
+    # This test will fail and we won't accept that! For Homebrew/homebrew-core	
+    # this will need to be a test that verifies the functionality of the	
+    # software. Run the test with `brew test ethpm-cli`. Options passed	
+    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.	
+    #	
+    # The installed folder is not in the path, so use the entire path to any	
+    # executables being tested: `system "#{bin}/program", "do", "something"`.	
+    system "false"	
   end
 end
