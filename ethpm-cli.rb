@@ -4,7 +4,7 @@ class EthpmCli < Formula
   homepage "www.ethpm.com"
   url "https://github.com/ethpm/ethpm-cli/blob/master/archives/ethpm-cli-0.1.0a3.tar.gz?raw=true"
   sha256 "f9f94c30f2cfc63a5ddce7a3aaa1dbd5ddbafc0f1cb21293aa07f8f647562353"
-  depends_on :python3
+  depends_on "python@3"
 
   resource "asn1crypto" do
     url "https://files.pythonhosted.org/packages/fc/f1/8db7daa71f414ddabfa056c4ef792e1461ff655c2ae2928a2b675bfed6b4/asn1crypto-0.24.0.tar.gz"
