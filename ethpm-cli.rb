@@ -178,6 +178,11 @@ class EthpmCli < Formula
     sha256 "ff66319ce26b9d77df1f610942634dac9742e216f2c27b051c0a2c2dec9c2818"
   end
 
+  resource "pypandoc" do
+    url "https://files.pythonhosted.org/packages/71/81/00184643e5a10a456b4118fc12c96780823adb8ed974eb2289f29703b29b/pypandoc-1.4.tar.gz"
+    sha256 "e914e6d5f84a76764887e4d909b09d63308725f0cbb5293872c2c92f07c11a5b"
+  end
+
   resource "pysha3" do
     url "https://files.pythonhosted.org/packages/73/bf/978d424ac6c9076d73b8fdc8ab8ad46f98af0c34669d736b1d83c758afee/pysha3-1.0.2.tar.gz"
     sha256 "fe988e73f2ce6d947220624f04d467faf05f1bbdbc64b0a201296bb3af92739e"
