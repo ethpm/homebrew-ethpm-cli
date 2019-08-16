@@ -109,11 +109,6 @@ class EthpmCli < Formula
     sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
   end
 
-  resource "ipfshttpclient" do
-    url "https://files.pythonhosted.org/packages/bd/76/ec048dfcdf182d04cb1e7a1a1d23018fccc4c8eb6cca5a43c4edbc39262d/ipfshttpclient-0.4.12.tar.gz"
-    sha256 "0a199a1005fe44bff9da28b5af4785b0b09ca700baac9d1e26718fe23fe89bb7"
-  end
-
   resource "jsonschema" do
     url "https://files.pythonhosted.org/packages/58/b9/171dbb07e18c6346090a37f03c7e74410a1a56123f847efed59af260a298/jsonschema-2.6.0.tar.gz"
     sha256 "6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02"
@@ -241,6 +236,8 @@ class EthpmCli < Formula
 
   def install
     virtualenv_create(libexec, "python3")
+	# https://github.com/takluyver/flit/issues/245
+	system libexec/"bin/pip", "install", "-v", "--no-deps", "--ignore-installed", "https://files.pythonhosted.org/packages/bd/76/ec048dfcdf182d04cb1e7a1a1d23018fccc4c8eb6cca5a43c4edbc39262d/ipfshttpclient-0.4.12.tar.gz#sha256=0a199a1005fe44bff9da28b5af4785b0b09ca700baac9d1e26718fe23fe89bb7"
     virtualenv_install_with_resources
   end
 
