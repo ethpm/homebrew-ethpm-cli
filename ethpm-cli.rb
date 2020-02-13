@@ -1,17 +1,17 @@
 class EthpmCli < Formula
-  include Language::Python::Virtualenv
+    include Language::Python::Virtualenv
 
   desc "CLI tool for ethPM ecosystem."
   homepage "https://github.com/ethereum/ethpm-cli"
-  url "https://files.pythonhosted.org/packages/0c/44/5604f29ec16f33ebc2bd20c57b9dc6e612c6ee3a2ef6c27a3903517aba36/ethpm-cli-0.1.0a3.tar.gz"
-  sha256 "f9f94c30f2cfc63a5ddce7a3aaa1dbd5ddbafc0f1cb21293aa07f8f647562353"
+  url "https://files.pythonhosted.org/packages/3e/bc/2db0a2891305e9171166f7660d9cfebf91e4e99a7c372a24f69205e5da9c/ethpm-cli-0.2.0.tar.gz"
+  sha256 "949e40ed4e3e997bc2ac78705968fdf15fe6af9dda3cadac08e0ab3a967bfd50"
 
   depends_on "python3"
   depends_on "pandoc" => :build
 
-  resource "asn1crypto" do
-    url "https://files.pythonhosted.org/packages/fc/f1/8db7daa71f414ddabfa056c4ef792e1461ff655c2ae2928a2b675bfed6b4/asn1crypto-0.24.0.tar.gz"
-    sha256 "9d5c20441baf0cb60a4ac34cc447c6c189024b6b4c6cd7877034f4965c464e49"
+  resource "appnope" do
+    url "https://files.pythonhosted.org/packages/26/34/0f3a5efac31f27fabce64645f8c609de9d925fe2915304d1a40f544cff0e/appnope-0.1.0.tar.gz"
+    sha256 "8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"
   end
 
   resource "attrdict" do
@@ -19,19 +19,29 @@ class EthpmCli < Formula
     sha256 "35c90698b55c683946091177177a9e9c0713a0860f0e049febd72649ccd77b70"
   end
 
+  resource "attrs" do
+    url "https://files.pythonhosted.org/packages/98/c3/2c227e66b5e896e15ccdae2e00bbc69aa46e9a8ce8869cc5fa96310bf612/attrs-19.3.0.tar.gz"
+    sha256 "f7b7ce16570fe9965acd6d30101a28f62fb4a7f9e926b3bbc9b61f8b04247e72"
+  end
+
+  resource "backcall" do
+    url "https://files.pythonhosted.org/packages/84/71/c8ca4f5bb1e08401b916c68003acf0a0655df935d74d93bf3f3364b310e0/backcall-0.1.0.tar.gz"
+    sha256 "38ecd85be2c1e78f77fd91700c76e14667dc21e2713b63876c0eb901196e01e4"
+  end
+
   resource "base58" do
-    url "https://files.pythonhosted.org/packages/c7/59/610af520e9f4d1b28c975bece4768d700884e38929e7ba0dcb25c9f6f87c/base58-1.0.3.tar.gz"
-    sha256 "9a793c599979c497800eb414c852b80866f28daaed5494703fc129592cc83e60"
+    url "https://files.pythonhosted.org/packages/40/bf/7f8109973337e67f038187ae93a97f2d55309402102ff88699f36c711fd5/base58-2.0.0.tar.gz"
+    sha256 "c83584a8b917dc52dd634307137f2ad2721a9efb4f1de32fc7eaaaf87844177e"
+  end
+
+  resource "cached-property" do
+    url "https://files.pythonhosted.org/packages/57/8e/0698e10350a57d46b3bcfe8eff1d4181642fd1724073336079cb13c5cf7f/cached-property-1.5.1.tar.gz"
+    sha256 "9217a59f14a5682da7c4b8829deadbfc194ac22e9908ccf7c8820234e80a1504"
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/c5/67/5d0548226bcc34468e23a0333978f0e23d28d0b3f0c71a151aef9c3f7680/certifi-2019.6.16.tar.gz"
-    sha256 "945e3ba63a0b9f577b1395204e13c3a231f9bc0223888be653286534e5873695"
-  end
-
-  resource "cffi" do
-    url "https://files.pythonhosted.org/packages/93/1a/ab8c62b5838722f29f3daffcc8d4bd61844aa9b5f437341cc890ceee483b/cffi-1.12.3.tar.gz"
-    sha256 "041c81822e9f84b1d9c401182e174996f0bae9991f33725d059b771744290774"
+    url "https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
+    sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
   end
 
   resource "chardet" do
@@ -39,19 +49,19 @@ class EthpmCli < Formula
     sha256 "84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"
   end
 
-  resource "cryptography" do
-    url "https://files.pythonhosted.org/packages/c2/95/f43d02315f4ec074219c6e3124a87eba1d2d12196c2767fadfdc07a83884/cryptography-2.7.tar.gz"
-    sha256 "e6347742ac8f35ded4a46ff835c60e68c22a536a8ae5c4422966d06946b6d4c6"
+  resource "cytoolz" do
+    url "https://files.pythonhosted.org/packages/62/b1/7f16703fe4a497879b1b457adf1e472fad2d4f030477698b16d2febf38bb/cytoolz-0.10.1.tar.gz"
+    sha256 "82f5bba81d73a5a6b06f2a3553ff9003d865952fcb32e1df192378dd944d8a5c"
   end
 
-  resource "cytoolz" do
-    url "https://files.pythonhosted.org/packages/23/0d/14181131b886eee3bbc6c07c2e7469bd1d764c429644824a7dc3f8628a98/cytoolz-0.10.0.tar.gz"
-    sha256 "ed9f6a07c2bac70d6c597df360d0666d11d2adc90141d54c5c2db08b380a4fac"
+  resource "decorator" do
+    url "https://files.pythonhosted.org/packages/dc/c3/9d378af09f5737cfd524b844cd2fbb0d2263a35c11d712043daab290144d/decorator-4.4.1.tar.gz"
+    sha256 "54c38050039232e1db4ad7375cfce6748d7b41c29e95a081c8a6d2c30364a2ce"
   end
 
   resource "eth-abi" do
-    url "https://files.pythonhosted.org/packages/bc/fa/aac577e85e31f42203f68abcc920b5162ff58037cb13e440dee468679889/eth-abi-2.0.0.tar.gz"
-    sha256 "21d6cf068a134926bf62606fb10ca39499c6f02c881ca5b78f8b745f21da23a1"
+    url "https://files.pythonhosted.org/packages/70/b9/8e3ad3228b7be63a48bca3229e01a4a00534aee4fd992292eef13699ee62/eth-abi-2.1.0.tar.gz"
+    sha256 "a8f3cc48a057dfcc77d4138920d482a9b0d3044e0ad68f0bc1bd8762720e0c13"
   end
 
   resource "eth-account" do
@@ -85,18 +95,18 @@ class EthpmCli < Formula
   end
 
   resource "eth-tester" do
-    url "https://files.pythonhosted.org/packages/4c/b5/4f2e2982ab68aebadb4c7a1f18791fa713189de1ea111c94f3a813879dd8/eth-tester-0.1.0b39.tar.gz"
-    sha256 "771ccb903671b45228ce4df6587ae5d7449afa0a269e29c45a1217eafe2bb8aa"
+    url "https://files.pythonhosted.org/packages/d5/44/e19b91a755bf911416240a598aec59212b9102408873011b51600ec346e0/eth-tester-0.2.0b2.tar.gz"
+    sha256 "03554e01eec57faefba256cca8c88beab1651eefb39f2ca9a21493acccc056e2"
   end
 
   resource "eth-typing" do
-    url "https://files.pythonhosted.org/packages/86/ae/5a7e54a0e0c6deed7aeeff351fc09366ea47d3a904ed4d86b9e9800b2535/eth-typing-2.1.0.tar.gz"
-    sha256 "164d5fb164636b62a5729557953edfadc91e4f1b055cd591cace24913a917764"
+    url "https://files.pythonhosted.org/packages/66/ee/a2a0972fbc18cb17c3bcfe3a3b8da3acad68f58d2292605a7c3c74286ac7/eth-typing-2.2.1.tar.gz"
+    sha256 "cf9e5e9fb62cfeb1027823328569315166851c65c5774604d801b6b926ff65bc"
   end
 
   resource "eth-utils" do
-    url "https://files.pythonhosted.org/packages/e9/12/a6ac53e69cef5ce3b1145878a3c3b15dce5426dec31082d98185bce0d165/eth-utils-1.6.2.tar.gz"
-    sha256 "025a560a42f03db6c9484f5e6ecfdfb4d2f4652bc918092341fee9930907417f"
+    url "https://files.pythonhosted.org/packages/6c/a5/43752cf1c7f10a648ad344c9aeddb624885d6d39890b2c529a1707134818/eth-utils-1.8.4.tar.gz"
+    sha256 "f398c649859cda5ef7c4ee2753468038d93be7d864de7631c06c3e73a7060649"
   end
 
   resource "hexbytes" do
@@ -109,9 +119,34 @@ class EthpmCli < Formula
     sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
   end
 
+  resource "importlib-metadata" do
+    url "https://files.pythonhosted.org/packages/0d/e4/638f3bde506b86f62235c595073066e7b8472fc9ee2b8c6491347f31d726/importlib_metadata-1.5.0.tar.gz"
+    sha256 "06f5b3a99029c7134207dd882428a66992a9de2bef7c2b699b5641f9886c3302"
+  end
+
+  resource "ipfshttpclient" do
+    url "https://files.pythonhosted.org/packages/bd/76/ec048dfcdf182d04cb1e7a1a1d23018fccc4c8eb6cca5a43c4edbc39262d/ipfshttpclient-0.4.12.tar.gz"
+    sha256 "0a199a1005fe44bff9da28b5af4785b0b09ca700baac9d1e26718fe23fe89bb7"
+  end
+
+  resource "ipython" do
+    url "https://files.pythonhosted.org/packages/ce/e1/b9234b258086f80f8507afb80f6774c6daf3bd9b2765190ee8e3cd2c4759/ipython-7.12.0.tar.gz"
+    sha256 "d9459e7237e2e5858738ff9c3e26504b79899b58a6d49e574d352493d80684c6"
+  end
+
+  resource "ipython_genutils" do
+    url "https://files.pythonhosted.org/packages/e8/69/fbeffffc05236398ebfcfb512b6d2511c622871dca1746361006da310399/ipython_genutils-0.2.0.tar.gz"
+    sha256 "eb2e116e75ecef9d4d228fdc66af54269afa26ab4463042e33785b887c628ba8"
+  end
+
+  resource "jedi" do
+    url "https://files.pythonhosted.org/packages/5a/b7/d7bdce4e0ae654125404b397b293ec8a0060a55c9e860794538701b19653/jedi-0.16.0.tar.gz"
+    sha256 "d5c871cb9360b414f981e7072c52c33258d598305280fef91c6cae34739d65d5"
+  end
+
   resource "jsonschema" do
-    url "https://files.pythonhosted.org/packages/58/b9/171dbb07e18c6346090a37f03c7e74410a1a56123f847efed59af260a298/jsonschema-2.6.0.tar.gz"
-    sha256 "6ff5f3180870836cae40f06fa10419f557208175f13ad7bc26caa77beb1f6e02"
+    url "https://files.pythonhosted.org/packages/69/11/a69e2a3c01b324a77d3a7c0570faa372e8448b666300c4117a516f8b1212/jsonschema-3.2.0.tar.gz"
+    sha256 "c8a85b28d377cc7737e46e2d9f2b4f44ee3c0e1deac6bf46ddefc7187d30797a"
   end
 
   resource "lru-dict" do
@@ -120,13 +155,13 @@ class EthpmCli < Formula
   end
 
   resource "multiaddr" do
-    url "https://files.pythonhosted.org/packages/f0/84/c9e74808cd3dfb594e13fab7606513607f9d94de1d1ad09879f9a49d2d7f/multiaddr-0.0.8.tar.gz"
-    sha256 "2faec68b479945fe6b48dd2dc1f8bcccf939aa148836e3a1ab806d6c75db1238"
+    url "https://files.pythonhosted.org/packages/12/f4/fa5353022ad8e0fd364bfa8b474f9562c36ce1305fad31fe52b849e30795/multiaddr-0.0.9.tar.gz"
+    sha256 "30b2695189edc3d5b90f1c303abb8f02d963a3a4edf2e7178b975eb417ab0ecf"
   end
 
-  resource "mypy_extensions" do
-    url "https://files.pythonhosted.org/packages/c2/92/3cc05d1206237d54db7b2565a58080a909445330b4f90a6436302a49f0f8/mypy_extensions-0.4.1.tar.gz"
-    sha256 "37e0e956f41369209a3d5f34580150bcacfabaa57b33a15c0b25f4b5725e0812"
+  resource "mypy-extensions" do
+    url "https://files.pythonhosted.org/packages/63/60/0582ce2eaced55f65a4406fc97beba256de4b7a95a0034c6576458c6519f/mypy_extensions-0.4.3.tar.gz"
+    sha256 "2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"
   end
 
   resource "netaddr" do
@@ -139,9 +174,34 @@ class EthpmCli < Formula
     sha256 "3add338892d580e0cb3b1a39e4a1b427ff9f687858fdd61097053742391a9f6b"
   end
 
+  resource "parso" do
+    url "https://files.pythonhosted.org/packages/db/f4/f714d71a23b65d0be451131137152764e01e5f74607678cb8318a20d564a/parso-0.6.1.tar.gz"
+    sha256 "56b2105a80e9c4df49de85e125feb6be69f49920e121406f15e7acde6c9dfc57"
+  end
+
+  resource "pexpect" do
+    url "https://files.pythonhosted.org/packages/e5/9b/ff402e0e930e70467a7178abb7c128709a30dfb22d8777c043e501bc1b10/pexpect-4.8.0.tar.gz"
+    sha256 "fc65a43959d153d0114afe13997d439c22823a27cefceb5ff35c2178c6784c0c"
+  end
+
+  resource "pickleshare" do
+    url "https://files.pythonhosted.org/packages/d8/b6/df3c1c9b616e9c0edbc4fbab6ddd09df9535849c64ba51fcb6531c32d4d8/pickleshare-0.7.5.tar.gz"
+    sha256 "87683d47965c1da65cdacaf31c8441d12b8044cdec9aca500cd78fc2c683afca"
+  end
+
+  resource "prompt-toolkit" do
+    url "https://files.pythonhosted.org/packages/8f/bc/58ba47a2a864d8e3d968d03b577c85fbdf52c8d324a030df71ac9c06c1b5/prompt_toolkit-3.0.3.tar.gz"
+    sha256 "a402e9bf468b63314e37460b68ba68243d55b2f8c4d0192f85a019af3945050e"
+  end
+
   resource "protobuf" do
-    url "https://files.pythonhosted.org/packages/cd/02/0425c38def9047d77166abdc9bb66dcff2882095c57b952511c85720f03c/protobuf-3.9.0.tar.gz"
-    sha256 "b3452bbda12b1cbe2187d416779de07b2ab4c497d83a050e43c344778763721d"
+    url "https://files.pythonhosted.org/packages/c9/d5/e6e789e50e478463a84bd1cdb45aa408d49a2e1aaffc45da43d10722c007/protobuf-3.11.3.tar.gz"
+    sha256 "c77c974d1dadf246d789f6dad1c24426137c9091e930dbf50e0a29c1fcf00b1f"
+  end
+
+  resource "ptyprocess" do
+    url "https://files.pythonhosted.org/packages/7d/2d/e4b8733cf79b7309d84c9081a4ab558c89d8c89da5961bf4ddb050ca1ce0/ptyprocess-0.6.0.tar.gz"
+    sha256 "923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0"
   end
 
   resource "py-ecc" do
@@ -150,23 +210,18 @@ class EthpmCli < Formula
   end
 
   resource "py-evm" do
-    url "https://files.pythonhosted.org/packages/d9/01/22f63f8edb79b3b0f0308ac6d5ea7a4f3e699276649bed6c8b5df0539d97/py-evm-0.2.0a42.tar.gz"
-    sha256 "fffc877923baa1fb2ea8925b14a36b96c6cfd2bc3f121387d5f9e98f4ef4178e"
+    url "https://files.pythonhosted.org/packages/75/7f/dcb2efdd5f9bbb0cb26e52adf0211c2ac9c01b68fe38eb4335fafe5b311d/py-evm-0.3.0a1.tar.gz"
+    sha256 "3e1f39a74bbee0403ddddc28170950c576060f8d3b9a19e5ebf4980f2717d4b6"
   end
 
   resource "py-geth" do
-    url "https://files.pythonhosted.org/packages/31/6c/5f6a3ab4f5078b8c1474190be5575564d0b1f20d0a6fc7fc473dfd14be34/py-geth-2.1.0.tar.gz"
-    sha256 "ab9ed996e1282dcb128e6749bb9db20f3139ae68894fbc5ecb9a7a56a5f0bc3e"
-  end
-
-  resource "pycparser" do
-    url "https://files.pythonhosted.org/packages/68/9e/49196946aee219aead1290e00d1e7fdeab8567783e83e1b9ab5585e6206a/pycparser-2.19.tar.gz"
-    sha256 "a988718abfad80b6b157acce7bf130a30876d27603738ac39f140993246b25b3"
+    url "https://files.pythonhosted.org/packages/3e/0d/37c15e6227846f4bfa839446219c923852ee6b1857277b1f16267fc350e2/py-geth-2.2.0.tar.gz"
+    sha256 "4af3d8e07738b2991d755c31d5de2d39231aa43c3ca28b74f44d7a5e9792eaff"
   end
 
   resource "pycryptodome" do
-    url "https://files.pythonhosted.org/packages/e2/7b/12f76a8bd427ebc54f24a0df6fd776fda48087d6a9a32ae0dbc3341dac3f/pycryptodome-3.8.2.tar.gz"
-    sha256 "5bc40f8aa7ba8ca7f833ad2477b9d84e1bfd2630b22a46d9bbd221982f8c3ac0"
+    url "https://files.pythonhosted.org/packages/37/84/5bb86e0a4cda99669ccf0814942889499dc11e3124fd4cc2f4faa447e966/pycryptodome-3.9.6.tar.gz"
+    sha256 "bc22ced26ebc46546798fa0141f4418f1db116dec517f0aeaecec87cf7b2416c"
   end
 
   resource "pyethash" do
@@ -174,9 +229,19 @@ class EthpmCli < Formula
     sha256 "ff66319ce26b9d77df1f610942634dac9742e216f2c27b051c0a2c2dec9c2818"
   end
 
+  resource "Pygments" do
+    url "https://files.pythonhosted.org/packages/cb/9f/27d4844ac5bf158a33900dbad7985951e2910397998e85712da03ce125f0/Pygments-2.5.2.tar.gz"
+    sha256 "98c8aa5a9f778fcd1026a17361ddaf7330d1b7c62ae97c3bb0ae73e0b9b6b0fe"
+  end
+
   resource "pypandoc" do
     url "https://files.pythonhosted.org/packages/71/81/00184643e5a10a456b4118fc12c96780823adb8ed974eb2289f29703b29b/pypandoc-1.4.tar.gz"
     sha256 "e914e6d5f84a76764887e4d909b09d63308725f0cbb5293872c2c92f07c11a5b"
+  end
+
+  resource "pyrsistent" do
+    url "https://files.pythonhosted.org/packages/90/aa/cdcf7ef88cc0f831b6f14c8c57318824c9de9913fe8de38e46a98c069a35/pyrsistent-0.15.7.tar.gz"
+    sha256 "cdc7b5e3ed77bed61270a47d35434a30617b9becdf2478af76ad2c6ade307280"
   end
 
   resource "pysha3" do
@@ -190,18 +255,23 @@ class EthpmCli < Formula
   end
 
   resource "rlp" do
-    url "https://files.pythonhosted.org/packages/9e/ea/beac98688ce787b80608c26b532ec9e2dd72876f0a97bcfddb68911f8673/rlp-1.1.0.tar.gz"
-    sha256 "ebe80a03c50e3d6aac47f44ddd45048bb99e411203cd764f5da1330e6d83821c"
+    url "https://files.pythonhosted.org/packages/4d/8f/ae650dbc78d874f8728ea74e569e3513dd49931d56e1f4273c5f3fd0075a/rlp-1.2.0.tar.gz"
+    sha256 "27273fc2dbc3513c1e05ea6b8af28aac8745fb09c164e39e2ed2807bf7e1b342"
   end
 
-  resource "semantic_version" do
-    url "https://files.pythonhosted.org/packages/72/83/f76958017f3094b072d8e3a72d25c3ed65f754cc607fdb6a7b33d84ab1d5/semantic_version-2.6.0.tar.gz"
-    sha256 "2a4328680073e9b243667b201119772aefc5fc63ae32398d6afafff07c4f54c0"
+  resource "semantic-version" do
+    url "https://files.pythonhosted.org/packages/67/24/7e8fcb6aa88bfc018f8e4c48c4dbc8e87d8c7b3c0d0d8b3b0c61a34d32c7/semantic_version-2.8.4.tar.gz"
+    sha256 "352459f640f3db86551d8054d1288608b29a96e880c7746f0a59c92879d412a3"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz"
-    sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+    url "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz"
+    sha256 "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
+  end
+
+  resource "termcolor" do
+    url "https://files.pythonhosted.org/packages/8a/48/a76be51647d0eb9f10e2a4511bf3ffb8cc1e6b14e9e4fab46173aa79f981/termcolor-1.1.0.tar.gz"
+    sha256 "1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"
   end
 
   resource "toolz" do
@@ -209,14 +279,24 @@ class EthpmCli < Formula
     sha256 "08fdd5ef7c96480ad11c12d472de21acd32359996f69a5259299b540feba4560"
   end
 
+  resource "traitlets" do
+    url "https://files.pythonhosted.org/packages/75/b0/43deb021bc943f18f07cbe3dac1d681626a48997b7ffa1e7fb14ef922b21/traitlets-4.3.3.tar.gz"
+    sha256 "d023ee369ddd2763310e4c3eae1ff649689440d4ae59d7485eb4cfbbe3e359f7"
+  end
+
   resource "trie" do
     url "https://files.pythonhosted.org/packages/30/0c/1010330d772c8f9d1ac43a9ebfac1f9ab15e59b82f4cdc231d06bd605be7/trie-1.4.0.tar.gz"
     sha256 "5c9501bc1af2c065502601370fc991c496c186c725ca408993d65a0792c2949b"
   end
 
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/e7/dd/f1713bc6638cc3a6a23735eff6ee09393b44b96176d3296693ada272a80b/typing_extensions-3.7.4.1.tar.gz"
+    sha256 "091ecc894d5e908ac75209f10d5b4f118fbdb2eb1ede6a63544054bb1edb41f2"
+  end
+
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/4c/13/2386233f7ee40aa8444b47f7463338f3cbdf00c316627558784e3f542f07/urllib3-1.25.3.tar.gz"
-    sha256 "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"
+    url "https://files.pythonhosted.org/packages/09/06/3bc5b100fe7e878d3dee8f807a4febff1a40c213d2783e3246edde1f3419/urllib3-1.25.8.tar.gz"
+    sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
   end
 
   resource "varint" do
@@ -224,14 +304,29 @@ class EthpmCli < Formula
     sha256 "a6ecc02377ac5ee9d65a6a8ad45c9ff1dac8ccee19400a5950fb51d594214ca5"
   end
 
+  resource "wcwidth" do
+    url "https://files.pythonhosted.org/packages/5e/33/92333eb80be0c96385dee338f30b53e24a8b415d5785e225d789b3f90feb/wcwidth-0.1.8.tar.gz"
+    sha256 "f28b3e8a6483e5d49e7f8949ac1a78314e740333ae305b4ba5defd3e74fb37a8"
+  end
+
   resource "web3" do
-    url "https://files.pythonhosted.org/packages/a0/3c/ac15afa6cdd4246dcf07b689cae6ec1a4d4a6026e135d381398a80f2e4d8/web3-5.0.0.tar.gz"
-    sha256 "e57b7e7f63d0643bb5f2bae8b2f53cff45ae2f0dff4f886d773dba988224191f"
+    url "https://files.pythonhosted.org/packages/97/b9/c101a127d55f5911c5244428e19c1ada3e36a84baba872341bcb090c7a34/web3-5.5.1.tar.gz"
+    sha256 "8def170567698f09f6ad1460f6a2dfba4a454b7ee30060c3f1ee7ed0273b91b8"
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/ba/60/59844a5cef2428cb752bd4f446b72095b1edee404a58c27e87cd12a141e2/websockets-7.0.tar.gz"
-    sha256 "08e3c3e0535befa4f0c4443824496c03ecc25062debbcf895874f8a0b4c97c9f"
+    url "https://files.pythonhosted.org/packages/e9/2b/cf738670bb96eb25cb2caf5294e38a9dc3891a6bcd8e3a51770dbc517c65/websockets-8.1.tar.gz"
+    sha256 "5c65d2da8c6bce0fca2528f69f44b2f977e06954c8512a952222cea50dad430f"
+  end
+
+  resource "wheel" do
+    url "https://files.pythonhosted.org/packages/75/28/521c6dc7fef23a68368efefdcd682f5b3d1d58c2b90b06dc1d0b805b51ae/wheel-0.34.2.tar.gz"
+    sha256 "8788e9155fe14f54164c1b9eb0a319d98ef02c160725587ad60f14ddc57b6f96"
+  end
+
+  resource "zipp" do
+    url "https://files.pythonhosted.org/packages/11/b5/89f3ab6d45b2709863761bab58c574b2344ef215749abb5407818c21c9ca/zipp-2.1.0.tar.gz"
+    sha256 "feae2f18633c32fc71f2de629bfb3bd3c9325cd4419642b1f1da42ee488d9b98"
   end
 
   def install
